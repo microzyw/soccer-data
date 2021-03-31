@@ -1,0 +1,30 @@
+{% extends "basic-simple.html" %}
+{% block selftitle %}用户登录{% endblock %}
+{% block selfheadtitle %}用户登录{% endblock %}
+{% block selfcss %}
+<link rel="stylesheet" href="../static/login/login.css">
+{% endblock %}
+{% block selfjs %}
+<script type="text/javascript" src="../static/login/login.js" ></script>
+{% endblock %}
+{% block selfcontent %}
+<div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">账号</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" id="username" placeholder="请输入账号" type="text">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">密码</label>
+        </div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" id="password" placeholder="请输入密码" type="password">
+        </div>
+    </div>
+</div>
+<div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" onclick="submitLogin()">确定</a>
+</div>
+{% endblock %}

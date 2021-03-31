@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>{% block selftitle %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/basic/weui/weui.css">
+    <link rel="stylesheet" href="../static/basic/weui/weuix.css">
+    {% block selfcss %}{% endblock %}
+    <script type="text/javascript" src="../static/basic/jquery/jquery.min.js" ></script>
+    <script type="text/javascript" src="../static/basic/weui/zepto.min.js" ></script>
+    <script type="text/javascript" src="../static/basic/weui/zepto.weui.js" ></script>
+    <script type="text/javascript" src="../static/basic/weui/php.js" ></script>
+    <script type="text/javascript" src="../static/utils/validate.js" ></script>
+    <script type="text/javascript" src="../static/utils/session.self.js" ></script>
+    <script type="text/javascript" src="../static/utils/variable.self.js" ></script>
+    {% block selfjs %}{% endblock %}
+</head>
+<body>
+<div class="bg-black weui-header weui-header-fixed">
+    <div class="weui-header-left"></div>
+    <h1 class="weui-header-title">
+        {% block selfheadtitle %}{% endblock %}
+    </h1>
+    <div class="weui-header-right"></div>
+</div>
+<div style="height:46px;"></div>
+{% block selfcontent %}{% endblock %}
+<br><br>
+<div class="weui-footer weui-footer_fixed-bottom">
+    <p class="weui-footer__text">Copyright © 2019 - 2021 成然科技</p>
+</div>
+</body>
+</html>
