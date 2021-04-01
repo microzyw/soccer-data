@@ -1,10 +1,17 @@
 from model.contants import Contants
-import os
-
+from lib.utils import UtilsFunction
+from bs4 import BeautifulSoup
 class MatchModel:
 
     def getMatchListByDate(targetDate):
         matchList = []
+        nowDate = UtilsFunction.getNowString(UtilsFunction.C_YYYY_MM_DD)
+        if targetDate >= nowDate:
+            url = Contants.BASE_SAICHENG_URL + targetDate.replace("-", "")
+        else:
+            url = Contants.BASE_WANCHANG_URL + targetDate.replace("-", "")
+        html = UtilsFunction.getHtmlCode(url)
+        soup = BeautifulSoup(html, 'lxml')
         matchList.append(targetDate)
         matchList.append("dalian-ddd")
         matchList.append("guangzhou-ddd")
