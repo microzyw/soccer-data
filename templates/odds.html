@@ -1,0 +1,29 @@
+{% extends "basic-simple.html" %}
+{% block selftitle %}赔率走势{% endblock %}
+{% block selfheadtitle %}赔率走势{% endblock %}
+{% block selfcss %}
+<link rel="stylesheet" href="../static/odds/odds.css">
+{% endblock %}
+{% block selfjs %}
+<script type="text/javascript" src="../static/odds/odds.js" ></script>
+{% endblock %}
+{% block selfcontent %}
+<div class="">
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label for="time-format" class="weui-label">比赛日</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" id="matchDay" type="text" readonly>
+            </div>
+    </div>
+    <div class="weui-cells" id="dataZone">
+    </div>
+    <div class="weui-loadmore" id="loadingZone">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips">正在加载</span>
+    </div>
+    <div class="weui-loadmore" id="endZone">
+        没有更多数据了
+    </div>
+</div>
+{% endblock %}

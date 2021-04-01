@@ -15,6 +15,10 @@ set FLASK_ENV=development
 flask run --host=0.0.0.0
 http://127.0.0.1:5000/
 
+### UI Template
+https://weui.shanliwawa.top/weui/
+https://weui.io/
+
 ### use Apache server ###
 1.判断python版本和vc版本关系
     用Python命令查看MSC对应的版本，去下载对应VC程序
